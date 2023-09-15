@@ -15,10 +15,8 @@
             header('Location: index.php');
             exit();
         }
-
-
-
     }
+
     if(isset($_GET['id'])){
         $id = $_GET['id'];
 
@@ -39,13 +37,13 @@
     
     <link rel="stylesheet" href="./css/adicionar.css">
 
-    <title>Document</title>
+    <title>Adicionar Filme</title>
 </head>
 
 <body>
     <!-- Header -->
     <nav class="navbar">
-            <a class="navbar-brand"><img src="css/insulfilm.png" alt="Insulfilm"></a>
+            <a class="navbar-brand" href="index.php"><img src="css/insulfilm.png" alt="Insulfilm"></a>
     </nav>
 
         <div class="container">
@@ -53,14 +51,17 @@
                 <div class="poster" style="background-image: url('<?php echo $row['imagem']; ?>');"></div>
                 
                 <div class="info">
-                    <h1><?php echo $row['nome']; ?></h1>
-                    <h3><?php echo $row['descricao']; ?><h3>
-                    <p><strong>Código:</strong> <?php echo $row['codigo']; ?></p>
-                    <p><strong>Valor:</strong> <?php echo $row['valor']; ?></p>
-                    <p><strong>Quantidade em Estoque:</strong> <?php echo $row['quantidadeEstoque']; ?></p>
+                    <div class="noneditable">
+                        <h1><?php echo $row['nome']; ?></h1>
+                        <h3><?php echo $row['descricao']; ?><h3>
+                        <p><strong>Código:</strong> <?php echo $row['codigo']; ?></p>
+                        <p><strong>Valor:</strong> <?php echo $row['valor']; ?></p>
+                        <p><strong>Quantidade em Estoque:</strong> <?php echo $row['quantidadeEstoque']; ?></p>
+                    </div>
+                    
 
                     <form method="POST">
-                        <div class="form">
+                        <div class="formulario">
                             <label for="codigo" class="form-label">Adicionar</label>
                             <input type="number" class="form-control" name="quant" maxlength="255" required>
                             <p>unidades</p>
@@ -69,7 +70,6 @@
                             <input type="submit" class="button" value="Add"></input>
                             <a class="button" href="index.php">Voltar</a>
                         </div>
-                        
                     </form>
                 </div>
             <?php endif; ?>

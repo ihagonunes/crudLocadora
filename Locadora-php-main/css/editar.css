@@ -24,58 +24,60 @@ body {
   background-color: rgb(18, 18, 18);
   color: white;
   border-radius: 20px 20px 20px 20px;
-  max-width: 95vw;
+  width: 1000px;
+  max-width: 85vw;
+  padding: 30px;
 }
 
-.poster {
-  aspect-ratio: 2/3;
-  /*height: 700px;
-  max-height: 70vh;*/
-  width: 300px;
-  height: 450px;
-  border-radius: 20px 0px 0px 20px;
-  
-  border-radius: 20px 20px 20px 20px;
-  width: fit-content;
-}
-
-
-
-.info {
-  max-width: 500px;
-  gap: 10px;
-  padding: 15px 15px;
-}
 
 h1 {
-  font-weight: bold;
-}
-
-h1, h3 {
   width: 100%;
   margin-bottom: 15px;
+  font-weight: bold;
 }
 
 form {
   display: flex;
   flex-direction: column;
+
   align-items: center;
   justify-content: center;
-  margin-top: 35px;
+  
+  width: 95%;
+
   padding: 10px;
   border-radius: 15px;
-  background-color: rgba(0, 0, 0, 0.5);
+  gap: 10px;
 }
 
-.formulario {
-  display: flex;
-  gap: 5px;
+.field{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form-label {
+    padding: 10px;
 }
 
 .form-control {
-  padding: 5px;
-  width: 50px;
-  border-radius: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    width: 70vw;
+}
+
+.form-control:disabled{
+    background-color: #7c7c7c;
+    color: #000000;
+}
+
+.control {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+  align-self: center;
 }
 
 .button {

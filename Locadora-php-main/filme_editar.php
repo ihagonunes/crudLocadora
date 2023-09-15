@@ -34,64 +34,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Filme</title>
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/editar.css">
 
-    <title>Document</title>
 </head>
 
 <body>
 
-    <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
-
     <!-- Header -->
-    <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand">Locadora</a>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-        </div>
+    <nav class="navbar">
+        <a class="navbar-brand" href="index.php"><img src="css/insulfilm.png" alt="Insulfilm"></a>
     </nav>
 
     <div class="container">
-        <h2>Inserir/Atualizar Dados do Filme</h2>
+        <h1>Atualizar Dados do Filme</h1>
         <form action="" method="POST">
-            <div class="mb-3">
+            <div class="field">
                 <label for="codigo" class="form-label">Código</label>
                 <input type="text" class="form-control" name="codigo" maxlength="255" disabled
                     value="<?php echo isset($row['codigo']) ? $row['codigo'] : ''; ?>">
             </div>
-            <div class="mb-3">
+            <div class="field">
                 <label for="nome" class="form-label">Nome</label>
                 <input type="text" class="form-control" name="nome" maxlength="255" required
                     value="<?php echo isset($row['nome']) ? $row['nome'] : ''; ?>">
-            </div>
-            <div class="mb-3">
+           </div>
+            <div class="field">
                 <label for="valor" class="form-label">Valor</label>
-                <input type="text" class="form-control" name="valor" required
+                <input type="number" class="form-control" name="valor" required
                     value="<?php echo isset($row['valor']) ? $row['valor'] : ''; ?>">
             </div>
-            <div class="mb-3">
+            <div class="field">
                 <label for="descricao" class="form-label">Descrição</label>
                 <textarea class="form-control" name="descricao" maxlength="255"
                     required><?php echo isset($row['descricao']) ? $row['descricao'] : ''; ?></textarea>
             </div>
-            <div class="mb-3">
+            <div class="field">
                 <label for="imagem" class="form-label">URL da Imagem</label>
                 <input type="text" class="form-control" name="imagem" maxlength="255" required
                     value="<?php echo isset($row['imagem']) ? $row['imagem'] : ''; ?>">
             </div>
-            <input type="submit" value="Salvar Filme" class="btn btn-primary">
-        </form>
 
+            <input type="submit" value="Salvar Filme" class="button">
+        </form>
     </div>
 </body>
-
 </html>

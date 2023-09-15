@@ -26,10 +26,10 @@ body {
 .navbar {
   display: flex;
   flex-direction: row;
-  width: 100vw;
+  flex-wrap: wrap;
+  width: 100%;
   color: #FFFFFF;
- /* background: linear-gradient(270deg, rgba(120, 0, 183, 1) 0%, rgba(42, 42, 42, 0) 100%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='franctalNoise' baseFrequency='2.3'%3E%3C/feTurbulence%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E") ;
-  */background-color: rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
   padding: 10px 0 10px 0;
   justify-content: space-around;
 }
@@ -43,6 +43,35 @@ body {
   height: 30px;
 }
 
+form {
+  padding: 2px 20px;
+  border-radius: 15px;
+  background-color: rgb(30, 30, 30);
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: center;
+}
+
+.search {
+  background-color: rgb(30, 30, 30);
+  color: #FFFFFF;
+}
+
+.buttonSearch {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.searchIcon {
+  align-self: center;
+  justify-self: center;
+  width: 25px;
+  height: auto;
+}
+
+.superiormenu {
+  width: 100%;
+}
 
 .menu {
   display: flex;
@@ -52,6 +81,7 @@ body {
   justify-content: center;
   gap: 25px;
 }
+
 
 .movie {
   display: flex;
@@ -90,6 +120,7 @@ body {
   width: 100%;
   height: 100%;
   display: flex;
+  border-radius: 10px 10px 0 0;
   backdrop-filter: blur(5px);
 }
 
@@ -141,4 +172,11 @@ body {
   background-color: rgb(0, 0, 0);
   border-radius: 15px;
 
+}
+
+.control {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+  align-self: center;
 }

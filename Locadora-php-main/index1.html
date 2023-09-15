@@ -3,40 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Editar Filme</title>
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/adicionar.css">
+    <link rel="stylesheet" href="./css/editar.css">
 </head>
 <body>
 
+    <!-- Header -->
+    <nav class="navbar">
+        <a class="navbar-brand"><img src="css/insulfilm.png" alt="Insulfilm"></a>
+    </nav>
+
     <div class="container">
+        <h1>Atualizar Dados do Filme</h1>
+        <form action="" method="POST">
+            <div class="field">
+                <label for="codigo" class="form-label">Código</label>
+                <input type="text" class="form-control" name="codigo" maxlength="255" disabled
+                    value="testeteste teste teste">
+            </div>
+            <div class="field">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" name="nome" maxlength="255" required
+                    value="testeteste teste teste">
+           </div>
+            <div class="field">
+                <label for="valor" class="form-label">Valor</label>
+                <input type="number" class="form-control" name="valor" required
+                    value="testeteste teste teste">
+            </div>
+            <div class="field">
+                <label for="descricao" class="form-label">Descrição</label>
+                <textarea class="form-control" name="descricao" maxlength="255"
+                    required>testesteseets</textarea>
+            </div>
+            <div class="field">
+                <label for="imagem" class="form-label">URL da Imagem</label>
+                <input type="text" class="form-control" name="imagem" maxlength="255" required
+                    value="testeteste teste teste">
+            </div>
 
-        <div class="poster" style="background-image: url('https://img.elo7.com.br/product/original/2C25D05/big-poster-filme-star-wars-o-despertar-da-forca-tam-90x60-cm-poster-star-wars.jpg');"></div>
-        
-        <div class="info">
-            <h1>Titulo</h1>
-            <h3>Sinopse<h3>
-            <p>Código</p>
-            <p>Valor</p>
-            <p>Quantidade em Estoque</p>
-
-            <form method="POST">
-                <div class="form">
-                    <label for="codigo" class="form-label">Adicionar</label>
-                    <input type="number" class="form-control" name="quant" maxlength="255" required>
-                    <p>unidades</p>
-                </div>
-                <div class="control">
-                    <input type="submit" class="button" value="Add"></input>
-                    <a class="button" href="index.php">Voltar</a>
-                </div>
-                
-            </form>
-        </div>
+            <input type="submit" value="Salvar Filme" class="button">
+        </form>
 
     </div>
-    
         
-
 </body>
 </html>

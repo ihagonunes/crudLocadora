@@ -23,22 +23,22 @@
     <link rel="stylesheet" href="css\index.css">
 
 
-    <title>Document</title>
+    <title>INSULFILM</title>
 </head>
 
 <body>
     <!-- Header -->
     <nav class="navbar">
-            <a class="navbar-brand"><img src="css/insulfilm.png" alt="Insulfilm"></a>
-            <form class="d-flex" role="search" method="POST">
-                <input class="form-control me-2" type="search" placeholder="Search" name="seach" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+            <a class="navbar-brand" href="index.php"><img src="css/insulfilm.png" alt="Insulfilm"></a>
+            <form class="forms" role="search" method="POST">
+                <input class="search" type="search" placeholder="Search" name="seach" aria-label="Search">
+                <button class="buttonSearch" type="submit"><img class="searchIcon" src="css/icons8-search-50.png" alt="Search"></button>
             </form>
     </nav>
 
     <!-- Itens -->
     <div class=" container">
-        <div class="menu">
+        <div class="menu superiormenu">
             <?php
                 while ($row = mysqli_fetch_assoc($result)) {
 
