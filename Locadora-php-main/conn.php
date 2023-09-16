@@ -3,7 +3,7 @@ $servername = "localhost";
 $username = "root";
 $password = "root";
 //se estiver pelo phpmyadmin
-//$password = "";
+// $password = "";
 $dbname = "locadora";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
