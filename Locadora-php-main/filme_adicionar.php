@@ -34,7 +34,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./css/index.css">
-    
+
     <link rel="stylesheet" href="./css/adicionar.css">
 
     <title>Adicionar Filme</title>
@@ -43,37 +43,37 @@
 <body>
     <!-- Header -->
     <nav class="navbar">
-            <a class="navbar-brand" href="index.php"><img src="css/insulfilm.png" alt="Insulfilm"></a>
+        <a class="navbar-brand" href="index.php"><img src="css/insulfilm.png" alt="Insulfilm"></a>
     </nav>
 
-        <div class="container">
-            <?php if($row): ?>
-                <div class="poster" style="background-image: url('<?php echo $row['imagem']; ?>');"></div>
-                
-                <div class="info">
-                    <div class="noneditable">
-                        <h1><?php echo $row['nome']; ?></h1>
-                        <h3><?php echo $row['descricao']; ?><h3>
+    <div class="container">
+        <?php if($row): ?>
+        <div class="poster" style="background-image: url('<?php echo $row['imagem']; ?>');"></div>
+
+        <div class="info">
+            <div class="noneditable">
+                <h1><?php echo $row['nome']; ?></h1>
+                <h3><?php echo $row['descricao']; ?><h3>
                         <p><strong>Código:</strong> <?php echo $row['codigo']; ?></p>
                         <p><strong>Valor:</strong> <?php echo $row['valor']; ?></p>
                         <p><strong>Quantidade em Estoque:</strong> <?php echo $row['quantidadeEstoque']; ?></p>
-                    </div>
-                    
+            </div>
 
-                    <form method="POST">
-                        <div class="formulario">
-                            <label for="codigo" class="form-label">Adicionar</label>
-                            <input type="number" class="form-control" name="quant" maxlength="255" required>
-                            <p>unidades</p>
-                        </div>
-                        <div class="control">
-                            <input type="submit" class="button" value="Add"></input>
-                            <a class="button" href="index.php">Voltar</a>
-                        </div>
-                    </form>
+
+            <form method="POST">
+                <div class="formulario">
+                    <label for="codigo" class="form-label">Adicionar</label>
+                    <input type="number" class="form-control" name="quant" maxlength="255" required>
+                    <p>unidades</p>
                 </div>
-            <?php endif; ?>
+                <div class="control">
+                    <input type="submit" class="button" value="Add"></input>
+                    <a class="button" href="index.php">Voltar</a>
+                </div>
+            </form>
         </div>
+        <?php endif; ?>
+    </div>
 </body>
 
 </html>
