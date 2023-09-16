@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+* {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(18, 18, 18);
+  color: white;
+  border-radius: 20px 20px 20px 20px;
+  max-width: 95vw;
+}
+
+.poster {
+  aspect-ratio: 2/3;
+  /*height: 700px;
+  max-height: 70vh;*/
+  width: 300px;
+  height: 450px;
+  border-radius: 20px 0px 0px 20px;
+  
+  border-radius: 20px 20px 20px 20px;
+  width: fit-content;
+}
+
+
+
+.info {
+  max-width: 500px;
+  gap: 10px;
+  padding: 15px 15px;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+h1, h3 {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 35px;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.formulario {
+  display: flex;
+  gap: 5px;
+}
+
+.form-control {
+  padding: 5px;
+  width: 50px;
+  border-radius: 10px;
+}
+
+.button {
+  background-color: rebeccapurple;
+  border-radius: 15px;
+  padding: 5px 20px;
+  font-size: 16px;
+  color: black;
+  width: fit-content;
+}
+
+a{
+  text-decoration: none;
+}
